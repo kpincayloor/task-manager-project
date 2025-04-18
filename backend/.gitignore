@@ -1,0 +1,38 @@
+# Node modules
+node_modules/
+
+# Build outputs
+dist/
+lib/
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Firebase
+.firebase/
+.firebaserc
+
+# VSCode settings
+.vscode/
+
+# Jest coverage
+coverage/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Firebase emulator state
+firebase-debug.log
+firebase-error.log
+firebase.json.backup
+
+# Mac system files
+.DS_Store

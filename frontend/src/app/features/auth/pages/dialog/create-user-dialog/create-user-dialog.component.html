@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Crear cuenta</h1>
+<div mat-dialog-content>
+  <p>
+    ¿Deseas crear una cuenta con el correo <strong>{{ data.email }}</strong
+    >?
+  </p>
+</div>
+<div mat-dialog-actions align="end">
+  <button mat-button (click)="onCancel()">Cancelar</button>
+  <button mat-raised-button color="primary" (click)="onConfirm()">Confirmar</button>
+</div>

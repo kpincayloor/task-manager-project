@@ -1,0 +1,56 @@
+<main class="min-h-screen flex items-center justify-center bg-login px-4">
+  <section
+    class="bg-backgroundDark backdrop-blur-md p-10 rounded-3xl shadow-2xl w-full max-w-md border border-accent animate-fade-in"
+    aria-labelledby="login-title"
+  >
+    <h2
+      id="login-title"
+      class="text-white text-3xl font-bold mb-8 text-center text-primary tracking-wide"
+    >
+      Bienvenido
+    </h2>
+
+    <form
+      [formGroup]="loginForm"
+      (ngSubmit)="onSubmit()"
+      role="form"
+      aria-describedby="login-description"
+      class="space-y-6"
+    >
+      <p id="login-description" class="sr-only">Bienvenidos</p>
+
+      <mat-form-field class="w-full">
+        <mat-label>
+          <label for="email" class="sr-only">Correo electrónico</label>
+          Correo electrónico
+        </mat-label>
+        <input
+          matInput
+          id="email"
+          name="email"
+          placeholder="tuemail@ejemplo.com"
+          formControlName="email"
+          type="email"
+          aria-required="true"
+          aria-label="Correo electrónico"
+          autocomplete="email"
+        />
+        <mat-error *ngIf="loginForm.get('email')?.invalid">
+          Ingresa un correo electrónico válido
+        </mat-error>
+      </mat-form-field>
+
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="loginForm.invalid"
+        aria-disabled="{{ loginForm.invalid }}"
+        aria-label="Ingresar al sistema"
+        class="w-full py-3 text-lg font-semibold tracking-wide rounded-lg shadow hover:shadow-lg hover:scale-105 transition-all duration-300"
+      >
+        Ingresar
+      </button>
+    </form>
+  </section>
+</main>
