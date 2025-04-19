@@ -26,6 +26,7 @@ Este proyecto es una SPA desarrollada con **Angular 18**, diseñada para gestion
 Editar o crear el archivo `.env` en la carpeta `frontend/.env` con las credenciales de tu proyecto de Firebase:
 
 ```env
+API_URL=function_url
 API_KEY=tu_api_key
 PROJECT_ID=tu_project_id
 ```
